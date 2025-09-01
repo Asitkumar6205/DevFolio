@@ -5,7 +5,7 @@ export type ThemeName =
   | 'winter' 
   | 'snowy-night' 
   | 'vintage' 
-  | 'vampire' 
+  | 'vampire'
   | 'bubblegum' 
   | 'green-tea' 
   | 'wood' 
