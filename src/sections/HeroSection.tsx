@@ -16,7 +16,7 @@ export function HeroSection() {
     >
       {/* Remove the canvas from HeroSection since CanvasAnimation handles it */}
       
-      <div className="fixed inset-0 flex flex-col justify-end items-baseline text-center px-4 pointer-events-auto">
+      <div className="fixed inset-0 flex flex-col justify-center items-start text-left px-8 md:px-16 lg:px-24 pointer-events-auto">
         <div className={`${isMobile ? "space-y-2" : "space-y-3"}`}>
           <h1
             className={`font-bold hero-text ${
@@ -59,7 +59,7 @@ export function HeroSection() {
             </Button>
           </div> */}
 
-          <div className="flex justify-center gap-6 mt-6">
+          <div className="flex gap-6 mt-6">
             <a
               href="#"
               className="text-muted-foreground hover:text-primary transition-colors"

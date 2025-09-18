@@ -4,6 +4,7 @@ import { Page1 } from "@/sections/Page1";
 import { Page2 } from "@/sections/Page2";
 import { Page3 } from "@/sections/Page3";
 import { HeroSection } from "../sections/HeroSection";
+import { Page4 } from "../sections/Page4";
 
 export const ScrollAnimationApp = () => {
   return (
@@ -22,6 +23,7 @@ export const ScrollAnimationApp = () => {
       <Page1 />
       <Page2 />
       <Page3 />
+      {/*<Page4 />*/}
     </div>
   );
 };
