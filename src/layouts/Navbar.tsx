@@ -7,7 +7,7 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 h-20 z-[99] flex items-center justify-between ${
+      className={`fixed top-0 left-16 right-16 h-20 z-[99] flex items-center justify-between ${
         isMobile ? "h-[8vh] px-4" : "h-[7vh] px-8"
       }`}
     >

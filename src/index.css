@@ -6,6 +6,59 @@
 All colors MUST be HSL.
 */
 
+@font-face {
+  font-family: "Shuriken";
+  src: url("./assets/fonts/Shuriken.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  /* Optionally more formats: .woff, .woff2, etc. */
+}
+
+/* Then, somewhere you use it: */
+.shuriken {
+  font-family: "Shuriken", sans-serif;
+}
+
+@font-face {
+  font-family: "Squidgame";
+  src: url("./assets/fonts/Squidgame.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  /* Optionally more formats: .woff, .woff2, etc. */
+}
+
+/* Then, somewhere you use it: */
+.squidgame {
+  font-family: "Squidgame", sans-serif;
+}
+
+@font-face {
+  font-family: "Bytebounce";
+  src: url("./assets/fonts/Bytebounce.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  /* Optionally more formats: .woff, .woff2, etc. */
+}
+
+/* Then, somewhere you use it: */
+.bytebounce {
+  font-family: "Bytebounce", sans-serif;
+}
+
+@font-face {
+  font-family: "Antique";
+  src: url("./assets/fonts/Antique.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  /* Optionally more formats: .woff, .woff2, etc. */
+}
+
+/* Then, somewhere you use it: */
+.antique {
+  font-family: "Antique", sans-serif;
+}
+
+
 @layer base {
   /* Plain Theme (Default) */
   :root,
@@ -21,7 +74,7 @@ All colors MUST be HSL.
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 210 40% 92%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
