@@ -163,14 +163,6 @@ export default function AutoScrollTextScroller() {
           style={{ top: "50%", transform: "translateY(-0.5px)" }}
         />
       </div>
-
-      {/* Current item counter */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 text-sm text-center">
-        <p className="mb-2">Auto-scrolling every 1 second</p>
-        <p>
-          {words[currentIndex]} • {currentIndex + 1} of {words.length}
-        </p>
-      </div>
     </div>
   );
 }
