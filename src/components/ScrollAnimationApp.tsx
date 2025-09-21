@@ -6,6 +6,7 @@ import { Page3 } from "@/sections/Page3";
 import { HeroSection } from "../sections/HeroSection";
 import ScrollTextScroller from "../animations/ScrollTextScroller";
 import { useEffect, useState, useRef } from "react";
+import { ArrowLeft } from "lucide-react";
 
 export const ScrollAnimationApp = () => {
   const [heroOpacity, setHeroOpacity] = useState(1);
@@ -86,12 +87,24 @@ export const ScrollAnimationApp = () => {
           {/* HeroSection */}
           <HeroSection />
           
-          {/* ScrollTextScroller positioned on the right side */}
-          <div className="absolute inset-0 w-screen h-screen pointer-events-none">
-            <div className="fixed top-0 right-0 w-1/3 min-w-[400px] h-screen pointer-events-auto">
+          {/* ScrollTextScroller positioned on the right side with full width */}
+          <div className="absolute top-0 right-0 w-auto h-screen pointer-events-none overflow-visible" style={{ width: 'fit-content', minWidth: '40vw' }}>
+            <div className="fixed top-0 right-4 h-screen pointer-events-auto overflow-visible" style={{ width: 'max-content', minWidth: '40vw' }}>
               <ScrollTextScroller />
             </div>
           </div>
+        </div>
+
+        {/* Left Arrow Icon Fixed at Right End Center of Screen */}
+        <div 
+          style={{ 
+            opacity: heroOpacity,
+            transition: 'opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+            pointerEvents: heroOpacity < 0.1 ? 'none' : 'auto'
+          }}
+          className="fixed top-1/2 right-0 transform -translate-y-1/2 z-50 "
+        >
+          <ArrowLeft strokeWidth={3} size={48} className="text-primary" />
         </div>
       </div>
 

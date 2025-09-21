@@ -21,7 +21,7 @@ export default function AutoScrollTextScroller() {
     "RESTful APIs",
     "GraphQL",
     "Unit Testing",
-    "Integration Testing",
+    "Intg. Testing",
     "TDD",
     "MySQL",
     "PostgreSQL",
@@ -36,16 +36,16 @@ export default function AutoScrollTextScroller() {
     "Cybersecurity",
     "Profiling",
     "Caching",
-    "Database Optimization",
+    "Db Optimiz.",
     "Git",
     "WebRTC",
     "Socket.io",
     "RabbitMQ",
     "Nginx",
-    "Shell Scripting",
+    "Bash",
     "Linux",
     "Scrum",
-    "Technical Documentation",
+    "Tech Documen.",
   ];
 
   const itemHeight = 100; // Height between items
@@ -116,10 +116,11 @@ export default function AutoScrollTextScroller() {
     const style: CSSProperties = {
       position: "absolute",
       top: "50%",
-      left: "50%",
-      transform: `translate(-50%, -50%) translateY(${
+      right: "0",
+      transform: `translateY(-50%) translateY(${
         distance * itemHeight
       }px) scale(${scale})`,
+      transformOrigin: "right center",
       opacity: isVisible ? opacity : 0,
       filter: `blur(${blur}px)`,
       fontSize,
@@ -129,16 +130,20 @@ export default function AutoScrollTextScroller() {
       userSelect: "none" as const,
       whiteSpace: "nowrap" as const,
       zIndex: isFocused ? 10 : Math.max(1, 5 - absDistance),
+      width: "max-content", // Ensure width fits content
+      minWidth: "fit-content", // Minimum width to fit content
+      textAlign: "right" as const,
     };
 
     return { style, isVisible, textColorClass };
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center overflow-hidden">
+    <div className="min-h-screen flex items-center justify-end overflow-hidden pr-8">
       <div
         ref={containerRef}
-        className="relative w-full h-screen flex items-center justify-center"
+        className="relative h-screen flex items-center justify-end"
+        style={{ minWidth: "400px", width: "max-content" }} // Ensure container is wide enough
       >
         {/* Render all words */}
         {words.map((word, index) => {
@@ -159,8 +164,12 @@ export default function AutoScrollTextScroller() {
 
         {/* Center reference line */}
         <div
-          className="absolute left-1/4 right-1/4 h-px bg-white/10"
-          style={{ top: "50%", transform: "translateY(-0.5px)" }}
+          className="absolute right-8 h-px bg-white/10"
+          style={{ 
+            top: "50%", 
+            transform: "translateY(-0.5px)",
+            width: "200px"
+          }}
         />
       </div>
     </div>
